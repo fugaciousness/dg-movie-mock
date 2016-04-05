@@ -1,0 +1,15 @@
+<div class="well">
+	<!--<img ng-src={{movie.Poster}}>--> <!--this works as well-->
+	<img ng-src={{createPoster()}}>
+	<div class="hpadding">
+		<h1>{{movie.Title}}</h1>
+		<hr>
+		<div>
+		<span class="text-small box">{{movie.Rated}}</span>
+		<span class="text-small">{{movie.Runtime}}</span>
+		<span class="text-small floatright">{{movie.Released}}</span>
+		</div>
+		<p class="vmargin">{{movie.Plot}}</p>
+		<button class="btn floatright" ng-click="linkToIMDB()">View on IMDB</button>
+	</div>
+</div>

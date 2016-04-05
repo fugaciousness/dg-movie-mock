@@ -1,0 +1,77 @@
+body {
+  padding: 20px 0; }
+
+ul {
+  list-style-type: none; }
+
+h1 {
+  font-size: 26px;
+  font-weight: normal;
+  color: #333333;
+  margin: 0; }
+
+p {
+  font-size: 14px; }
+
+img {
+  height: 200px; }
+
+hr {
+  margin: 10px 0;
+  height: 1px;
+  color: #333333;
+  background-color: #333333;
+  border: none; }
+
+.text-small {
+  font-size: 12px; }
+
+.hpadding {
+  padding-left: 20px; }
+
+.vmargin {
+  margin-top: 20px; }
+
+.floatright {
+  float: right; }
+
+.text-right {
+  text-align: right; }
+
+.btn {
+  background-color: #FFa500;
+  color: white; }
+  .btn:hover {
+    background-color: #b27300;
+    color: white; }
+
+.filterBtn {
+  background-color: #ccc;
+  border: 1px solid #333333; }
+  .filterBtn:hover {
+    background-color: #4169E1; }
+  .filterBtn.selected {
+    background-color: #4169E1;
+    color: white; }
+
+.container {
+  max-width: 750px; }
+
+.well {
+  display: flex;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  border: 2px solid #333333;
+  align-items: center; }
+
+.box {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  padding: 5px 10px; }
+
+/*# sourceMappingURL=main.css.map */

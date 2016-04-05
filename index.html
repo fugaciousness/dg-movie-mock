@@ -4,9 +4,12 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Movies</title>
-
+<title>Movie Example</title>
 <script src="https://az168019.vo.msecnd.net/scripts/libs/modernizr.custom.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="./content/styles/css/main.css">
+
     <!--[if lte IE 8]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.4/es5-shim.min.js"></script>
     <![endif]-->
@@ -14,8 +17,27 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="dgMovieApp">
-
+<body ng-app="dgMovieApp" ng-controller="MovieController as MovieCont">
+	<div class = "container">
+		<div class="row">
+			<div class="row text-right">
+				<!--buttons to filter data-->
+				<div class="btn-group">
+					<button type="button" class="btn filterBtn" ng-click="yearfilter = {Year: 20}; toggle2 = !toggle2; toggle1 = false" ng-class="{'selected' : toggle2}">2000s</button>
+					<button type="button" class="btn filterBtn" ng-click="yearfilter = {Year: 19}; toggle1 = !toggle1; toggle2 = false" ng-class="{'selected' : toggle1}">1990s</button>
+				</div>
+			</div>
+			<!--list of movies-->
+			<div class="row vmargin">
+				<ul>
+					<li ng-repeat="movie in movieDetailsList  | filter:yearfilter">
+						<movie-tile></movie-tile>
+					</li>	
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
 
 
 
